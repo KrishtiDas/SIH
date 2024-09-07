@@ -1,0 +1,330 @@
+ *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+  body{
+    background-image:url();
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    font-family:sans-serif;
+  }
+  .navbar{
+    background: rgb(4, 3, 49);
+    text-align: center;
+  }
+  .navbar-logo img{
+    display: flex;
+    width: 80px;
+    height: 70px;
+    border-radius: 25%; 
+    object-fit: cover;
+    border: 2px solid #ccc; 
+    background-color: #fff;
+    margin-top: 10px;
+  }
+  .navbar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+    padding-right: 12px;
+  }
+  .navbar ul li{
+    width : 120px;
+    margin: 15px;
+    padding: 15px;
+  }
+  .navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .active, .navbar ul li:hover{
+    /* background: rgb(149, 148, 176); */
+    border-radius: 2px;
+  }
+  .navbar .fa{
+    margin-right: 10px;
+  
+  }
+  .sub-menu-1 {
+    display: none;
+  }
+  .navbar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: rgb(4, 3, 49);
+    margin-top: 15px;
+    margin-left: -15px;
+    z-index: 100;
+  }
+  .navbar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+    z-index: 100;
+  }
+  .navbar ul li:hover .sub-menu-1 ul li{
+    width: 120px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: solid;
+    border-radius:0;
+    text-align: left;
+    z-index: 100;
+  }
+  .navbar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom:none;
+  }
+  .navbar ul li:hover .sub-menu-1 ul li a:hover{
+    color: #b2ff00;
+  }
+  .fa-angle-right{
+    float: right;
+  }
+  .sub-menu-2{
+    display: none;
+  }
+  .hover-me:hover .sub-menu-2 {
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: rgb(4, 3, 49);
+    z-index: 100;
+  }
+  .sub-menu-3{
+    display: none;
+  }
+  .hover-me:hover .sub-menu-3 {
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: rgb(4, 3, 49);
+    z-index: 100;
+  }
+  
+.search-box {
+	border: none;
+	border-bottom: 1px solid #aaa;
+	background: transparent;
+	outline: none;
+	height: 30px;
+	color: #fff;
+	width: 250px;
+	text-transform: capitalize;
+	font-size: 16px;
+	font-weight: 500;
+	transition: 0.5s;
+}
+
+.search-box:focus {
+	width: 400px;
+	border-color: #1f80e0;
+}
+
+.login-link {
+  background: #1f80e0;
+	height: 80px;
+	width: 90px;
+	padding: 0 10px;
+	color: #fff;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 15px;
+	margin: 0 10px; 
+	text-decoration: none;
+}
+
+.navbar-profile {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+}
+
+.navbar-profile img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 2px solid #ccc; 
+
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: rgb(4, 3, 49);
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(188, 89, 89, 0.2);
+    z-index: 100;
+}
+
+.profile-dropdown a {
+    color: white;
+    padding: 10px 15px;
+    border-bottom: 1px dotted #fff;
+    display: block;
+    background: solid;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.profile-dropdown a:hover {
+    color: #b2ff00;
+}
+
+.navbar-profile:hover .profile-dropdown {
+    display: block;
+} 
+
+.cards-container {
+  display: flex;
+  align-items: flex-start; 
+  gap: 140px;
+  flex-wrap: wrap; 
+  max-width: 1200px; 
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 60px;
+}
+
+.course-card {
+  background-color: rgb(4, 3, 49);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(227, 33, 33, 0.1);
+  width: 30%; 
+  padding: 20px;
+  text-align: center;
+  min-width: 250px; 
+  max-width: 300px; 
+  flex-grow: 1;
+}
+
+.course-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.course-card p {
+  margin-top: 13px;
+  font-style: italic;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.progress-container {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  background-color: #26d1c2;
+  border-radius: 25px;
+  height: 15px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 25px;
+  transition: width 0.3s ease;
+}
+
+.progress-percent {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #34bcba;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: rgb(4, 3, 49);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  margin-top:30px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex-basis: 30%; 
+  margin-bottom: 20px;
+  min-width: 250px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column ul,
+.footer-column li {
+  margin: 5px 0;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #4CAF50; 
+}
+
+.social-media {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.social-media li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media li a:hover {
+  color: #4CAF50; 
+}
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
